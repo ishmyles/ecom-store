@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 
-import App from '../src/App';
+import Shop from './Shop';
 
-describe('App', () => {
+describe('Shop', () => {
   it("renders correct heading", () => {
-    render(<App />);
-    expect(screen.getByRole("heading").textContent).toMatch(/ecom store/i);
+    render(<Shop />)
+    expect(screen.getByRole("heading").textContent).toMatch(/shop/i);
   });
 });
