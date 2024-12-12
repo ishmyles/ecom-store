@@ -1,16 +1,17 @@
-import "./Navbar.css"
+import { Link } from "react-router-dom";
 
-import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import "./Navbar.css"
+import CartIcon from "../CartIcon/CartIcon";
 
 export default function Navbar() {
     return (
         <header id="navbar">
             <nav>
                 <ul className="nav-list">
-                    <li className="nav-item">Home</li>
-                    <li className="nav-item">Shop</li>
+                    <li className="nav-item"><Link to="/">Home</Link></li>
+                    <li className="nav-item"><Link to="/shop">Shop</Link></li>
                     <li className="nav-item">
-                        <ShoppingCart />
+                    <Link to="/shop/cart"><CartIcon /></Link>
                     </li>
                 </ul>
             </nav>
