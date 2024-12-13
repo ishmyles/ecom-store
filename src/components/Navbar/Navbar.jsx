@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "./Navbar.css"
-import CartIcon from "../CartIcon/CartIcon";
+import CartIcon from "../Icons/CartIcon";
 
 export default function Navbar() {
     return (

@@ -8,7 +8,7 @@ import {
 import './index.css'
 
 import App from './App'
-import Home from './components/Home/Home'
+import Home from './components/HomePage/Home/Home'
 import Shop from './components/Shop/Shop'
 import ShoppingCart from './components/ShoppingCart/ShoppingCart'
 import ErrorPage from './components/ErrorPage/ErrorPage'

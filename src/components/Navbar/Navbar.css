@@ -1,9 +1,8 @@
 #navbar {
     width: 100vw;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     
     padding: 1em 0;
-    border: 1px solid white;
 }
 
 #navbar:hover {
@@ -11,6 +10,7 @@
 }
 
 .nav-list {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -20,7 +20,7 @@
     list-style-type: none;
 }
 
-.nav-item:first-of-type {
+/* .nav-item:first-of-type {
     margin-left: auto;
 }
 
@@ -31,4 +31,9 @@
 
     margin-left: auto;
     padding-right: 1em;
+} */
+
+.nav-item:last-of-type {
+    position: absolute;
+    right: 20px;
 }
