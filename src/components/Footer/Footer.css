@@ -1,0 +1,48 @@
+#footer {
+    background-color: #dcdbdb; /* Change later*/
+    color: #191d1f;
+    padding: 3em 1em;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-column h2 {
+    margin-bottom: 20px;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.payment-list {
+    padding-top: 1.5em;
+}
+
+.payment-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .footer-items {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .payment-list ul{
+        gap: 3px;
+    }
+}
