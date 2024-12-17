@@ -1,0 +1,10 @@
+.selection-input {
+    background-color: #fff;
+    color: #000;
+
+    font-size: 1rem;
+    text-transform: capitalize;
+
+    padding: 1em;
+    border: none;
+}

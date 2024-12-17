@@ -9,7 +9,7 @@ import './index.css'
 
 import App from './App'
 import Home from './components/HomePage/Home/Home'
-import Shop from './components/Shop/Shop'
+import Shop from './components/ShopPage/Shop/Shop'
 import ShoppingCart from './components/ShoppingCart/ShoppingCart'
 import ErrorPage from './components/ErrorPage/ErrorPage'
 
