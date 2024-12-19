@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import useCategories from '../../../hooks/useCategories/useCategories';
 import useProducts from '../../../hooks/useProducts/useProducts';
 import SelectInput from '../SelectInput/SelectInput';
@@ -14,7 +14,7 @@ const sortingOptions = {
 function Shop() {
   const [ category, setCategory ] = useState('all');
   const { categoryList } = useCategories();
-  const { productList, setProductList, error, loading} = useProducts(category); 
+  const { productList, setProductList, error, loading} = useProducts(category);
 
   const changeCategory = (selectedCategory) => setCategory(selectedCategory);
 
@@ -47,7 +47,7 @@ function Shop() {
             <p>There was an issue trying to get your products.</p>
             <p>Please try again later.</p>
           </div>}
-        {productList.map(item => (
+        {!loading && productList.map(item => (
           <ProductCard key={item.id} id={item.id} title={item.title} rating={item.rating} price={item.price} image={item.image} />
         ))}
       </div>

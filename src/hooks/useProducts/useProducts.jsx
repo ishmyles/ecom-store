@@ -7,14 +7,13 @@ export default function useProducts(selectedCategory) {
 
     useEffect(() => {
         const productsUrl = (selectedCategory !== "all") ? `https://fakestoreapi.com/products/category/${selectedCategory}` : 'https://fakestoreapi.com/products/';
+        
         const controller = new AbortController();
         const signal = controller.signal
 
         const fetchProducts = async () => {
             try {
-                setLoading(true);
-                setProductList([]);
-
+                setLoading(true)
                 const response = await fetch(productsUrl, {signal});
                 const products = await response.json();
 
