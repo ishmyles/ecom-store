@@ -1,8 +1,28 @@
+#shopping-cart {
+    position: relative;
+}
+
 .icon-cart {
     width: 1.5em;
     height: 1.5em;
     color-scheme: light dark;
     fill: #ffffff;
+}
+
+.item-count-bubble {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: #ff0000;
+    color: #ffffff;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+
+    padding: 2px 5px;
+    border-radius: 50%;
 }
 
 @media (prefers-color-scheme: light) {

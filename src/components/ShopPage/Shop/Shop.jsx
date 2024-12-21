@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import useCategories from '../../../hooks/useCategories/useCategories';
 import useProducts from '../../../hooks/useProducts/useProducts';
+import { useOutletContext } from "react-router-dom";
+
 import SelectInput from '../SelectInput/SelectInput';
 import ProductCard from '../ProductCard/ProductCard';
 
 import styles from './Shop.module.css'
+import appStyles from '../../../App.module.css'
 
 const sortingOptions = {
   options: ["Relevance" ,"Price (ascending)", "Price (descending)", "Rating (ascending)", "Rating (descending"],
@@ -12,6 +15,7 @@ const sortingOptions = {
 };
 
 function Shop() {
+  const {shoppingCart, setShoppingCart} = useOutletContext(); 
   const [ category, setCategory ] = useState('all');
   const { categoryList } = useCategories();
   const { productList, setProductList, error, loading} = useProducts(category);
@@ -32,8 +36,24 @@ function Shop() {
     }
   }
 
+  const addToCart = (product) => {
+    if (!shoppingCart.length) {
+      setShoppingCart([{product: product, quantity: 1}]);
+      return;
+    }
+
+    const index = shoppingCart.findIndex(item => item.product.id === product.id);
+    if (index !== -1) { 
+      const newList = [...shoppingCart];
+      newList[index].quantity = newList[index].quantity + 1;
+      setShoppingCart(newList);
+    } else {
+      setShoppingCart(prevState => [...prevState, {product, quantity: 1}]);
+    }
+  }
+
   return (
-    <div className={styles.content}>
+    <div className={appStyles.content}>
       <h1>Products</h1>
       <aside>
         <SelectInput id={"selected-category"} label={"Filter by"} values={categoryList} options={categoryList} onChangeFunc={changeCategory}  />
@@ -48,7 +68,7 @@ function Shop() {
             <p>Please try again later.</p>
           </div>}
         {!loading && productList.map(item => (
-          <ProductCard key={item.id} id={item.id} title={item.title} rating={item.rating} price={item.price} image={item.image} />
+          <ProductCard key={item.id} id={item.id} title={item.title} category={item.category} rating={item.rating} price={item.price} image={item.image} addToCart={addToCart} />
         ))}
       </div>
     </div>

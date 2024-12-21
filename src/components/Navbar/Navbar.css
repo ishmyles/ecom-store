@@ -1,8 +1,9 @@
 #navbar {
-    /* width: 100vw; */
     font-size: 1.4rem;
     
     padding: 1em 0;
+    border-bottom: .1rem solid rgba(61, 66, 70, .08);
+    box-shadow:  -1px 1px 5px #00000047;
 }
 
 #navbar:hover {
@@ -19,19 +20,6 @@
     padding: 0;
     list-style-type: none;
 }
-
-/* .nav-item:first-of-type {
-    margin-left: auto;
-}
-
-.nav-item:last-of-type {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    margin-left: auto;
-    padding-right: 1em;
-} */
 
 .nav-item:last-of-type {
     position: absolute;
