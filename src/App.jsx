@@ -1,26 +1,18 @@
-import './App.css'
-import { Outlet } from "react-router-dom";
-import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Footer/Footer';
-
 import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom"
 
+import PageTemplate from './components/PageTemplate/PageTemplate'
 import Home from './components/HomePage/Home/Home'
 import Shop from './components/ShopPage/Shop/Shop'
-import ShoppingCart from './components/ShoppingCart/ShoppingCart'
+import ShoppingCart from './components/ShoppingCartPage/ShoppingCart/ShoppingCart'
 import ErrorPage from './components/ErrorPage/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <>
-                <Navbar />
-                <Outlet />
-                <Footer />
-             </>,
+    element: <PageTemplate />,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -40,7 +32,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-
   return <RouterProvider router={router} />
 }
 
