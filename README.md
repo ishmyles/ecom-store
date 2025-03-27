@@ -2,6 +2,7 @@
 
 A simple ecommerce store that replicates displaying/sorting products, as well as adding items to the cart.
 
+- [Visit the preview](https://ish-ecom-store.netlify.app/)
 - Utilises the [Fake Store API](https://fakestoreapi.com/)
 
 ## Technologies Used
