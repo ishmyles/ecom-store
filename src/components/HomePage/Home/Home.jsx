@@ -5,7 +5,7 @@ import Quality from '../../Icons/QualityIcon'
 import InfoCard from '../InfoCard/InfoCard';
 import ProductCard from '../ProductCard/ProductCard';
 
-import './home.css'
+import './Home.css'
 
 export default function Home() {
     return (
