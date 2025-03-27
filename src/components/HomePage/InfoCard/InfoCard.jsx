@@ -1,4 +1,4 @@
-import './Infocard.css'
+import './InfoCard.css'
 
 export default function InfoCard({subheading, icon, description}) {
     return (
